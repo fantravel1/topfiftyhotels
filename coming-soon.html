@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Coming Soon — TopFiftyHotel</title>
+  <meta name="description" content="This page is coming soon. TopFiftyHotel is building the definitive ranking of the 50 best hotels in the world.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://topfiftyhotels.com/coming-soon">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>★</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-midnight: #0b1120;
+      --color-navy: #121a2f;
+      --color-gold: #c9a96e;
+      --color-gold-light: #d4bc8a;
+      --color-ivory: #f5f0eb;
+      --color-silver: #b0bec5;
+      --color-muted: #8899aa;
+      --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+      --font-sans: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-midnight);
+      color: var(--color-ivory);
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Background glow */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201, 169, 110, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .coming-soon {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--color-ivory);
+      letter-spacing: -0.02em;
+      margin-bottom: 3rem;
+      display: block;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .logo:hover {
+      opacity: 0.8;
+    }
+
+    .logo span {
+      color: var(--color-gold);
+    }
+
+    .seal {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(201, 169, 110, 0.3);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .seal::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border: 1px solid rgba(201, 169, 110, 0.12);
+      border-radius: 50%;
+    }
+
+    .seal__text {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-gold);
+    }
+
+    .subtitle {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--color-gold);
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--color-silver);
+      margin-bottom: 2rem;
+    }
+
+    .divider {
+      width: 50px;
+      height: 1px;
+      background: var(--color-gold);
+      opacity: 0.4;
+      margin: 0 auto 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: pointer;
+    }
+
+    .btn--primary {
+      background-color: var(--color-gold);
+      color: var(--color-midnight);
+    }
+
+    .btn--primary:hover {
+      background-color: var(--color-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 24px rgba(201, 169, 110, 0.15);
+    }
+
+    .btn--outline {
+      border: 1px solid rgba(201, 169, 110, 0.4);
+      color: var(--color-gold);
+      background: transparent;
+      margin-left: 0.5rem;
+    }
+
+    .btn--outline:hover {
+      border-color: var(--color-gold);
+      background-color: rgba(201, 169, 110, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 480px) {
+      .actions {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .note {
+      margin-top: 3rem;
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      line-height: 1.7;
+    }
+
+    .note a {
+      color: var(--color-gold);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .note a:hover {
+      color: var(--color-gold-light);
+    }
+
+    /* Ambient animation */
+    .ambient {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+      opacity: 0.15;
+      animation: shimmer 4s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { opacity: 0.05; }
+      50% { opacity: 0.2; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="coming-soon">
+    <a href="/" class="logo">Top<span>Fifty</span>Hotel</a>
+
+    <div class="seal">
+      <span class="seal__text">TF</span>
+    </div>
+
+    <p class="subtitle">Coming Soon</p>
+    <h1>This Page Is Being <em>Carefully Curated</em></h1>
+    <div class="divider"></div>
+    <p>
+      Just like our hotel lists, this page will only launch when it meets our standard. No rushing. No filler. Only content worth your time.
+    </p>
+
+    <div class="actions">
+      <a href="/" class="btn btn--primary">
+        Back to Home
+      </a>
+      <a href="/#faq" class="btn btn--outline">
+        Read the FAQ
+      </a>
+    </div>
+
+    <p class="note">
+      TopFiftyHotel — Fewer choices. Better stays.<br>
+      <a href="/">topfiftyhotels.com</a>
+    </p>
+  </div>
+
+  <div class="ambient"></div>
+
+</body>
+</html>
